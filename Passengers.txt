@@ -1,0 +1,50 @@
+Online Railway Management System
+_________________________________
+
+db.createCollection("User")
+
+db.User.insertMany([{
+"user_id":"10001",
+"name": "Riya",
+"email": "riya123@gmail.com",
+"age":"32",
+"gender": "Female",
+"password": "riya123",
+"location": "Delhi"
+},
+{
+"user_id":"10002",
+"name": "Priya",
+"email": "priya123@gmail.com",
+"age":"25",
+"gender": "Female",
+"password": "priya543",
+"location": "Pune"
+},
+{
+"user_id": "10003",
+"age":"24",
+"email": "kriya234@abc.com",
+"gender": "female",
+"location": "Mumbai",
+"name": "Kriya",
+"password": "kriya123"
+},
+{
+"user_id": "10006",
+"name": "Piya",
+"email": "piya123@abc.com",
+"age":"23",
+"gender": "Female",
+"password": "piya123",
+"location": "Gujrat"
+},
+{
+"user_id": "10009",
+"name": "jiya",
+"email": "jiya123@abc.com",
+"age":"24",
+"gender": "female",
+"password": "jiya123",
+"location": "Goa"
+}])

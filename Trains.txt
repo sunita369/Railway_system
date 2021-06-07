@@ -1,0 +1,60 @@
+Online Railway Management system
+___________________________________
+
+db.createCollection("TrainDetails")
+
+db.TrainDetails.insertMany([{
+"train_no":"4678798",
+"arrival_time": "2021-07-02T01:11:18.965Z",
+"departure_time": "2021-07-02T01:12:18.965Z",
+"starting_station": "Sealdah",
+"destination": "New Delhi",
+"fare": "1000",
+"journey_time": "18 hours",
+"journey_route": ["Sealdah", "TataNagar", "New Delhi"],
+"total_distance": "1430km"
+},
+{
+"train_no":"46786548",
+"arrival_time": "2021-07-03T01:11:18.965Z",
+"departure_time": "2021-07-03T03:11:18.965Z",
+"starting_station": "Howrah",
+"destination": "Pune",
+"fare": "900",
+"journey_time": "16 hours",
+"journey_route": ["Howrah", "Patna", "Pune"],
+"total_distance": "1130km"
+},
+{
+"train_no":"4678654486",
+"arrival_time": "04:30 AM",
+"departure_time": "07:315 AM",
+"starting_station": "Howrah",
+"destination": "New Delhi",
+"fare": "1050",
+"journey_time": "19 hours",
+"journey_route": ["Howrah", "Bhubaneshwar", "New Delhi"],
+"total_distance": "1530km"
+},
+{
+"train_no":"4678798",
+"arrival_time": "2021-06-21T01:11:18.965Z",
+"departure_time": "2021-06-22T02:11:18.965Z",
+"starting_station": "Sealdah",
+"destination": "Bangalore",
+"fare": "900",
+"journey_time": "12 hours",
+"journey_route": ["Sealdah", "TataNagar", "Bangalore"],
+"total_distance": "970km"
+},
+{
+"train_no":"454556787",
+"arrival_time": "2021-06-22T01:15:18.965Z",
+"departure_time": "2021-06-23T02:11:18.965Z",
+"starting_station": "Sealdah",
+"destination": "Mumbai",
+"fare": "1020",
+"journey_time": "16 hours",
+"journey_route": ["Sealdah", "TataNagar", "Mumbai"],
+"total_distance": "1370km"
+}

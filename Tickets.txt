@@ -1,0 +1,57 @@
+Online Railway Management system
+___________________________________
+
+db.createCollection("TicketReservation")
+
+db.TicketReservation.insertMany([{
+pnr_number:"1900254564654",
+coach_no:"B2",
+seat_no:"135-B",
+journey_time:"20 hours",
+boarding_station:"Sealdah",
+destination:"Pune",
+booking_time:"2021-06-19T13:21:55.000",
+boarding_time:"2021-06-24T13:21:55.000"
+},
+{
+pnr_number:"1900254567854",
+coach_no:"B3",
+seat_no:"132-B1",
+journey_time:"18 hours",
+boarding_station:"Sealdah",
+destination:"Mumbai",
+booking_time:"2021-06-25T13:21:55.000",
+boarding_time:"2021-06-28T13:21:55.000"
+},
+{
+"pnr_number": "19002548654654",
+"coach_no": "A2",
+"seat_no": "065-A1",
+"journey_time": "16 hours",
+"boarding_station": "Sealdah",
+"destination": "Bangalore",
+"booking_time": "2021-06-19T13:21:55.000",
+"boarding_time": "2021-07-02T13:21:55.000"
+},
+{
+"pnr_number": "190025465444654",
+    "coach_no": "B2",
+    "seat_no": "135-B",
+    "journey_time": "20 hours",
+    "boarding_station": "Sealdah",
+    "destination": "New Delhi",
+    "booking_time": "2021-06-19T13:21:55.000",
+    "boarding_time": "2021-06-24T13:21:55.000"
+
+},
+{
+"pnr_number": "19002545652444654",
+    "coach_no": "B2",
+    "seat_no": "131-B",
+    "journey_time": "18 hours",
+    "boarding_station": "Howrah",
+    "destination": "New Delhi",
+    "booking_time": "2021-06-20T13:20:55.000",
+    "boarding_time": "2021-06-23T13:19:55.000"
+}])
+
