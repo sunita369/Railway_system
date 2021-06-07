@@ -1,0 +1,22 @@
+Online Railway Management System
+________________________________
+
+db.AirlineAuthority.insertMany([{
+"User_ID":"12111",
+"User_Name": "Sunita",
+"Email": "sunita12@abc.com",
+"Password": "sunita123"
+},
+{
+"User_ID":"12115",
+"User_Name": "Auser",
+"Email": "user123@gmail.com",
+"Password": "ami123@xyz.com"
+},
+{
+"User_ID":"12114",
+"User_Name": "OnkarD",
+"Email": "Onkard145@gmail.com",
+"Password": "onkarsir123"
+}
+])
