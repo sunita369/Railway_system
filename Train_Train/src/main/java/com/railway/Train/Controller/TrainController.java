@@ -1,4 +1,4 @@
-package com.railway.passenger.controller;
+package com.railway.Train.Controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,43 +13,43 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.railway.passenger.models.PassengerModel;
-import com.railway.passenger.repositories.PassengerRepository;
+import com.railway.Train.Models.TrainModel;
+import com.railway.Train.Repositories.TrainRepository;
 
 @RestController
-@RequestMapping("/Passenger")
-public class PassengerController {
-	
+@RequestMapping("/Train")
+public class TrainController {
+
 	@Autowired
-	private PassengerRepository repo;
+	private TrainRepository repo;
 	
-	@PostMapping("/addPassenger")
-	public String saveBook(@RequestBody PassengerModel passenger) {
-		repo.save(passenger);
-		return "added Passenger with id:" + passenger.getId();
+	@PostMapping("/addTrain")
+	public String saveBook(@RequestBody TrainModel train ) {
+		repo.save(train);
+		return "Added Train with id:" + train.getId();
 	}
 	
-	@GetMapping("/findAllPassenger")
-	public List<PassengerModel> getBooks(){
+	@GetMapping("/findAllTrain")
+	public List<TrainModel> getBooks(){
 		return repo.findAll();
 	}
 	
-	@GetMapping("/findAllPassenger/{id}")
-	public Optional<PassengerModel> getBook(@PathVariable String id){
+	@GetMapping("/findAllTrain/{id}")
+	public Optional<TrainModel> getBook(@PathVariable String id){
 		return repo.findById(id);
 	}
 	
 	@DeleteMapping("/delete/{id}")
 	public String deleteBook(@PathVariable String id) {
 		repo.deleteById(id);
-		return "Passenger deleted with id:" +id;
+		return "Train deleted with id:" +id;
 	}
 	
 	@PutMapping("/update/{id}")
-	public PassengerModel updateBook(@PathVariable String id, @RequestBody PassengerModel passenger) {
-		passenger.setId(id);
-		repo.save(passenger);
-		return passenger;
+	public TrainModel updateBook(@PathVariable String id, @RequestBody TrainModel train) {
+		train.setId(id);
+		repo.save(train);
+		return train;
 	}
 
 }
