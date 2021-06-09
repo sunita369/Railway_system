@@ -1,18 +1,17 @@
-package com.railway.passenger;
+package com.railway.Train;
 
 import org.springframework.boot.SpringApplication;
-
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
-@SpringBootApplication(scanBasePackages = {"com.railway.passenger.controller"})
+@SpringBootApplication(scanBasePackages = {"com.railway.Train.Controller"})
 @EnableEurekaClient
-@EnableMongoRepositories(basePackages = "com.railway.passenger.repositories")
-public class PassengerApplication {
+@EnableMongoRepositories(basePackages = "com.railway.Train.Repositories")
+public class TrainApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PassengerApplication.class, args);
+		SpringApplication.run(TrainApplication.class, args);
 	}
 
 }
