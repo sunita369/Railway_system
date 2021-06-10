@@ -1,10 +1,11 @@
 package com.railway.MainAdmin.repositories;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
 
-import com.railway.MainAdmin.models.MainAdminModel;
+import com.railway.MainAdmin.models.Train;
 
-
-public interface MainAdminRepository extends MongoRepository<MainAdminModel, String> {
+@Repository
+public interface MainAdminRepository extends MongoRepository<Train, String> {
 
 }

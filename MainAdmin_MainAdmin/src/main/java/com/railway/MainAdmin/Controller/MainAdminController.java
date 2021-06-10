@@ -1,6 +1,7 @@
 package com.railway.MainAdmin.Controller;
 
 import java.util.List;
+
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,44 +14,39 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.railway.MainAdmin.models.MainAdminModel;
-import com.railway.MainAdmin.repositories.MainAdminRepository;
+import com.railway.MainAdmin.Service.MainAdminService;
+import com.railway.MainAdmin.models.Train;
 
 @RestController
-@RequestMapping("/Admins")
+@RequestMapping("/Train")
 public class MainAdminController {
 	
 	@Autowired
-	private MainAdminRepository repo;
+	private MainAdminService repo;
 	
-	@PostMapping("/addAdmin")
-	public String saveBook(@RequestBody MainAdminModel admin) {
-		repo.save(admin);
-		return "added Admin with id:" + admin.getId();
+	@PostMapping("/addTrain")
+	public String saveTrain(@RequestBody Train train) {
+		repo.addTrain(train);
+		return "added Train with id:" + train.getId();
 	}
 	
-	@GetMapping("/findAllAdmin")
-	public List<MainAdminModel> getBooks(){
-		return repo.findAll();
+	@GetMapping("/findAllTrain")
+	public List<Train> getTrains(){
+		return repo.getAllTrain();
 	}
 	
-	@GetMapping("/findAllAdmin/{id}")
-	public Optional<MainAdminModel> getBook(@PathVariable String id){
-		return repo.findById(id);
+	@GetMapping("/findAllTrain/{train_no}")
+	public Optional<Train> getTrain(@PathVariable String train_no){
+		return repo.getTrainbyTrain_no(train_no);
 	}
 	
-	@DeleteMapping("/delete/{id}")
-	public String deleteBook(@PathVariable String id) {
-		repo.deleteById(id);
-		return "Admin deleted with id:" +id;
+	@DeleteMapping("/delete/{train_no}")
+	public String deleteFlight(@PathVariable String train_no) {
+		repo.deleteTrain(train_no);
+		return "Admin deleted with id:" +train_no;
 	}
 	
-	@PutMapping("/update/{id}")
-	public MainAdminModel updateBook(@PathVariable String id, @RequestBody MainAdminModel admin) {
-		admin.setId(id);
-		repo.save(admin);
-		return admin;
-	}
+	
 
 
 }
