@@ -45,7 +45,12 @@ public class MainAdminController {
 		repo.deleteTrain(train_no);
 		return "Admin deleted with id:" +train_no;
 	}
-	
+	@PutMapping("/update/{train_no}")
+	public Train updateTrain (@PathVariable String train_no,@RequestBody Train train) {
+		return repo.updateTrain(train_no, train);
+
+	}
+
 	
 
 
