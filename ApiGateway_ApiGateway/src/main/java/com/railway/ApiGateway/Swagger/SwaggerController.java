@@ -19,8 +19,11 @@ public class SwaggerController implements SwaggerResourcesProvider{
 	@Override
 	public List<SwaggerResource> get() {
 		List<SwaggerResource> resources = new ArrayList<>();
+		
 		resources.add(swaggerResource("Mainadmin-Service","/MAINADMIN-SERVICE/v2/api-docs","2.0"));
+		
 		resources.add(swaggerResource("Passenger-service", "/PASSENGER-SERVICE/v2/api-docs", "2.0"));
+		
 		resources.add(swaggerResource("Payment-Service", "/PAYMENT-SERVICE/v2/api-docs", "2.0"));
 		return resources;
 	}
