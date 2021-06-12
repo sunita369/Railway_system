@@ -28,7 +28,7 @@ public class PaymentApplication {
 	@Bean
 	public  Docket swaggerConfiguration()  {
             return new Docket(DocumentationType.SWAGGER_2)  
-                .select() 
+                .select()
                 .apis(RequestHandlerSelectors.basePackage("com.railway.payment.controller"))
                 .paths(PathSelectors.any())                          
                 .build()
